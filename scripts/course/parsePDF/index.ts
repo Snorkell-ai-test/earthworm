@@ -22,6 +22,12 @@ const outputPath = path.resolve(__dirname, "../courses");
   }
 })();
 
+/**
+ * Saves the content to a file with the specified file name.
+ * @param content The content to be saved to the file.
+ * @param fileName The name of the file to save the content to.
+ * @throws Throws an error if the file cannot be written.
+ */
 function save(content: string, fileName: string) {
   const filePath = path.resolve(outputPath, `${fileName}.json`);
   fs.writeFileSync(filePath, content);

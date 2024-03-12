@@ -5,6 +5,10 @@ if (process.env.NODE_ENV === "production") {
   addClarity()
 }
 
+/**
+ * Adds the Clarity script for https://clarity.microsoft.com/ to the appScripts array.
+ * @throws {Error} Throws an error if the process.env.CLARITY environment variable is not defined.
+ */
 // for https://clarity.microsoft.com/
 function addClarity() {
   appScripts.push({

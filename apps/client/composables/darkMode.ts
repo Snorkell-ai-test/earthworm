@@ -8,6 +8,15 @@ export enum Theme {
 const DARK_MODE = "DARK_MODE";
 
 const darkMode = ref(Theme.LIGHT);
+/**
+ * Function to enable dark mode on the website.
+ * @returns {{
+ *    setDarkMode: (state?: boolean) => void,
+ *    toggleDarkMode: (event: MouseEvent) => void,
+ *    initDarkMode: () => void,
+ *    darkMode: Theme
+ * }}
+ */
 export function useDarkMode() {
   const isAppearanceTransition =
     // @ts-expect-error: Transition API
@@ -20,6 +29,10 @@ export function useDarkMode() {
 
   const cacheDarkMode = sessionStorage.getItem(DARK_MODE) as Theme | null;
 
+  /**
+   * Initializes the dark mode based on the current state and cache.
+   * @throws {Error} Throws an error if the dark mode cannot be set.
+   */
   const initDarkMode = () => {
     if (isDarkMode && !cacheDarkMode) {
       setDarkMode(true);
@@ -28,6 +41,11 @@ export function useDarkMode() {
     setDarkMode(cacheDarkMode === Theme.DARK);
   };
 
+  /**
+   * Toggles the dark mode by adding or removing the "dark" class from the document element.
+   * @param isDark - A boolean indicating whether to enable or disable dark mode.
+   * @throws - No exceptions are thrown by this method.
+   */
   const toggle = (isDark: boolean) => {
     if (!isDark) {
       document.documentElement.classList.add("dark");
@@ -36,6 +54,13 @@ export function useDarkMode() {
     }
   };
 
+  /**
+   * Toggles the dark mode based on the event.
+   * 
+   * @param event - The mouse event triggering the dark mode toggle.
+   * 
+   * @throws {Error} - Throws an error if there is an issue with the transition API.
+   */
   const toggleDarkMode = (event: MouseEvent) => {
     const isDark = document.documentElement.classList.contains("dark");
 
@@ -75,6 +100,12 @@ export function useDarkMode() {
     });
   };
 
+  /**
+   * Sets the dark mode for the application.
+   * 
+   * @param state - A boolean indicating whether to enable or disable dark mode.
+   * @throws {Error} - If state is not a boolean value.
+   */
   const setDarkMode = (state = false) => {
     if (state) {
       document.documentElement.classList.add("dark");

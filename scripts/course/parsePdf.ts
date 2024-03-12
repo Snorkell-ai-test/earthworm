@@ -19,6 +19,11 @@ const dirName = "pdf";
   }
 })();
 
+/**
+ * Main method to process a course file and write the result to a JSON file.
+ * @param courseFileName - The name of the course file to be processed.
+ * @throws Error - If there is an error reading or parsing the course file.
+ */
 function main(courseFileName: string) {
   let dataBuffer = fs.readFileSync(`./${dirName}/${courseFileName}.pdf`);
 
@@ -36,6 +41,13 @@ function main(courseFileName: string) {
 
 const STARTSIGN = "中文 英文 K.K.音标";
 const ENDSIGN = "中文 原形 第三人称单数 过去式 ing形式";
+/**
+ * Parses the input text and returns an array of parsed data.
+ * 
+ * @param text The input text to be parsed
+ * @returns An array of parsed data
+ * @throws {Error} Throws an error if the input text is invalid or if there is a parsing error
+ */
 function parse(text: string) {
   // 0. 先基于 \n 来切分成数组
   const rawTextList = text.split("\n").map((t) => {
@@ -67,6 +79,10 @@ function parse(text: string) {
       soundmark: "",
     };
 
+    /**
+     * Runs the function to process the text list and extract Chinese and English data.
+     * @throws {Error} Throws an error if the text list is empty.
+     */
     function run() {
       const element = textList[i];
       let chinese = "";
@@ -106,11 +122,24 @@ function parse(text: string) {
   return result;
 }
 
+/**
+ * Check if the input string contains Chinese characters.
+ * @param str - The input string to be checked.
+ * @returns - Returns true if the input string contains Chinese characters, otherwise returns false.
+ * @throws - This function does not throw any exceptions.
+ */
 function isChinese(str: string) {
   const reg = /^[\u4e00-\u9fa5]/;
   return reg.test(str);
 }
 
+/**
+ * Parses the input text to extract English and soundmark information.
+ * 
+ * @param text - The input text to be parsed.
+ * @returns An object containing the parsed English and soundmark information.
+ * @throws Throws an error if the input text is empty or if there are issues with parsing the text.
+ */
 function parseEnglishAndSoundmark(text: string) {
   const list = text.split(" ");
   const soundmarkdStartIndex = list.findIndex((t) => t.startsWith("/"));
@@ -142,7 +171,21 @@ function parseEnglishAndSoundmark(text: string) {
   };
 }
 
+/**
+ * Parses the input Chinese string by removing commas.
+ * 
+ * @param chinese The input Chinese string to be parsed.
+ * @returns The parsed Chinese string without commas.
+ * @throws Throws an error if the input is not a valid string.
+ */
 function parseChinese(chinese: string) {
+  /**
+   * Removes all commas from the input string.
+   * 
+   * @param chinese The input string containing commas to be removed.
+   * @returns A new string with all commas removed.
+   * @throws {Error} If the input is not a valid string.
+   */
   function deleteComma(chinese: string) {
     return chinese.replace(/，/g, "");
   }
