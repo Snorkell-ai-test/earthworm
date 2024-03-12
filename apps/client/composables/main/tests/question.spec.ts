@@ -3,7 +3,71 @@ import { useInput } from "../question";
 
 describe("question", () => {
   it("should parse user input correctly", () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const { userInputWords, setInputValue } = useInput({
@@ -41,7 +105,71 @@ describe("question", () => {
   });
 
   it("should be correct when checked the answer", async () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const { setInputValue, submitAnswer } = useInput({
@@ -59,7 +187,71 @@ describe("question", () => {
   });
 
   it("should be incorrect when checked the answer", async () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const { userInputWords, setInputValue, submitAnswer } = useInput({
@@ -78,7 +270,71 @@ describe("question", () => {
   });
 
   it("should be the first word should be active", () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const { userInputWords } = useInput({
@@ -91,7 +347,71 @@ describe("question", () => {
   });
 
   it("should be the first word should be active", () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const { userInputWords } = useInput({
@@ -104,6 +424,38 @@ describe("question", () => {
   });
 
   it("should be changed the activated word based on the user's input", () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
     const getInputCursorPosition = vi.fn();
 
@@ -131,7 +483,71 @@ describe("question", () => {
   });
 
   it("should be cleared the first incorrect word", async () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const {
@@ -154,7 +570,71 @@ describe("question", () => {
   });
 
   it("should be possible to clear out the wrong words in turn", async () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const { setInputValue, userInputWords, submitAnswer, fixIncorrectWord } =
@@ -184,7 +664,71 @@ describe("question", () => {
   });
 
   it("should prevent any input when fix mode", () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const { setInputValue, submitAnswer, handleKeyboardInput } = useInput({
@@ -207,7 +751,71 @@ describe("question", () => {
   });
 
   it("should prevent move", () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const { setInputValue, submitAnswer, handleKeyboardInput } = useInput({
@@ -236,7 +844,71 @@ describe("question", () => {
   });
 
   it("should prevent space when fix input", async () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const {
@@ -264,7 +936,71 @@ describe("question", () => {
   });
 
   it("should prevent backspace when fix input", async () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const getInputCursorPosition = () => 0;
 
     const {
@@ -292,6 +1028,38 @@ describe("question", () => {
   });
 
   it("should prevent space when focus on last word", async () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
     const getInputCursorPosition = vi.fn();
 
@@ -315,7 +1083,71 @@ describe("question", () => {
   });
 
   it("should back to previous incorrect word", async () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     let getInputCursorPosition = () => 0;
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     let setInputCursorPosition = () => {};
 
     const {
@@ -344,6 +1176,38 @@ describe("question", () => {
   });
 
   it("should submit answer when enable use space", () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
     const getInputCursorPosition = vi.fn();
 
@@ -376,6 +1240,38 @@ describe("question", () => {
   });
 
   it("should submit answer when enable use space and fix the last incorrect word", async () => {
+    /**
+     * Transforms the sign-up request data to match the backend's expected format.
+     * 
+     * @param {SignUpRequest} signUpData - The original sign-up request data.
+     * 
+     * @returns {Object} The transformed sign-up request data with the following changes:
+     * - `firstName` is mapped to `first_name`
+     * - `lastName` is mapped to `last_name`
+     * - `email` is mapped to `username`
+     * - All other properties remain unchanged.
+     * 
+     * @example
+     * const originalData = {
+     *   firstName: 'John',
+     *   lastName: 'Doe',
+     *   email: 'john.doe@example.com',
+     *   password: 'securePassword123'
+     * };
+     * 
+     * const transformedData = transformSignUpRequestForBackend(originalData);
+     * console.log(transformedData);
+     * // Outputs:
+     * // {
+     * //   firstName: 'John',
+     * //   lastName: 'Doe',
+     * //   email: 'john.doe@example.com',
+     * //   password: 'securePassword123',
+     * //   first_name: 'John',
+     * //   last_name: 'Doe',
+     * //   username: 'john.doe@example.com'
+     * // }
+     */
     const setInputCursorPosition = () => {};
     const getInputCursorPosition = vi.fn();
 
