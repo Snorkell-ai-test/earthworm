@@ -14,6 +14,15 @@ import path from 'node:path'
   );
   await db.delete(statement);
 
+  /**
+   * Create a statement with the given order, Chinese, English, soundmark, and course ID.
+   * @param order The order of the statement.
+   * @param chinese The Chinese text of the statement.
+   * @param english The English translation of the statement.
+   * @param soundmark The soundmark of the statement.
+   * @param courseId The ID of the course associated with the statement.
+   * @throws {Error} If there is an issue with inserting the statement into the database.
+   */
   function createStatement(order: number, chinese: string, english: string, soundmark: string, courseId: number) {
     return db.insert(statement).values({
       order,

@@ -26,10 +26,22 @@ const messageInstance = new Map<
   }
 >();
 
+/**
+ * Generates a new container element.
+ * @returns {HTMLElement} - The newly created container element.
+ * @throws {Error} - If the 'createElement' function is not available in the document object.
+ */
 const genContainer = () => {
   return document.createElement("div");
 };
 
+/**
+ * Retrieves the element to which the content will be appended.
+ * 
+ * @param props - The properties object containing the information about the element to append to.
+ * @returns The HTMLElement to which the content will be appended.
+ * @throws {Error} If the provided props are invalid or if the element to append to is not found.
+ */
 const getAppendToElement = (props: any): HTMLElement => {
   let appendTo: HTMLElement | null = document.body;
   if (props.appendTo) {
@@ -46,6 +58,12 @@ const getAppendToElement = (props: any): HTMLElement => {
   return appendTo;
 };
 
+/**
+ * Teardown the message box component.
+ * @param vm The component instance of the message box.
+ * @param container The HTML element container.
+ * @throws {Error} If the rendering fails.
+ */
 const teardown = (
   vm: ComponentPublicInstance<MessageBoxProps>,
   container: HTMLElement
@@ -54,6 +72,12 @@ const teardown = (
   messageInstance.delete(vm);
 };
 
+/**
+ * Initialize a new instance with the given properties and container element.
+ * @param props - The properties for the instance.
+ * @param container - The container element to render the instance into.
+ * @throws {Error} Throws an error if any of the called functions are not available.
+ */
 const initInstance = (props: any, container: HTMLElement) => {
   const vnode = createVNode(MessageBoxConstructor, props);
   render(vnode, container);
@@ -61,6 +85,13 @@ const initInstance = (props: any, container: HTMLElement) => {
   return vnode.component;
 };
 
+/**
+ * Show message with the given options.
+ * 
+ * @param options - The options for the message.
+ * @returns The component instance for the message.
+ * @throws {Error} When an error occurs during message display.
+ */
 const showMessage = (options: any) => {
   const container = genContainer();
 
@@ -93,6 +124,14 @@ const showMessage = (options: any) => {
   return vm;
 };
 
+/**
+ * Displays a message box with the specified content and title, and returns a promise that resolves with the user's action.
+ * @param content The content of the message box. Defaults to "Are you sure?" if not provided.
+ * @param title The title of the message box. Defaults to "Tips" if not provided.
+ * @param options Additional options for customizing the message box.
+ * @returns A promise that resolves with the user's action.
+ * @throws {Error} If there is an issue displaying the message box.
+ */
 function MessageBox(
   content: string = "Are you sure?",
   title: string = "Tips",

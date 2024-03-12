@@ -2,6 +2,11 @@ import { migrate } from "drizzle-orm/mysql2/migrator";
 import { drizzle } from "drizzle-orm/mysql2";
 import * as mysql from "mysql2/promise";
 
+/**
+ * Asynchronous function to run migrations.
+ * 
+ * @throws {Error} Throws an error if there is an issue with the migration process.
+ */
 async function main() {
   console.log("Running your migrations...");
 

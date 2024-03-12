@@ -1,6 +1,12 @@
 import fs from "fs";
 import inquirer from "inquirer";
 
+/**
+ * Asynchronously prompts the user to select an action and returns a Promise with the selected file paths.
+ * @param folderPath The path of the folder to be used for file operations.
+ * @returns A Promise that resolves with an array of selected file paths.
+ * @throws {Error} If there is an error in the asynchronous operation.
+ */
 export async function inquire(folderPath: string): Promise<string[]> {
   return new Promise((resolve, reject) => {
     inquirer
@@ -37,6 +43,12 @@ export async function inquire(folderPath: string): Promise<string[]> {
   });
 }
 
+/**
+ * Lists all files in the specified folder path.
+ * @param {string} folderPath - The path of the folder to list files from.
+ * @throws {Error} Throws an error if the folderPath is invalid or inaccessible.
+ * @returns {Array<{name: string, value: string}>} An array of objects containing the name and value of each file in the folder.
+ */
 function listAllFiles(folderPath) {
   const files = fs.readdirSync(folderPath);
   return files.map((file, index) => ({
